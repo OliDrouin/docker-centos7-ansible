@@ -29,7 +29,7 @@ This image is built on Docker Hub automatically any time the upstream OS contain
 ## How to Use
 
   1. [Install Docker](https://docs.docker.com/engine/installation/).
-  2. Pull this image from Docker Hub: `docker pull olidrouin/docker-centos7-ansible:test` (or use the image you built earlier, e.g. `centos7-ansible:latest`).
+  2. Pull this image from Docker Hub: `docker pull olidrouin/docker-centos7-ansible:test` (or use the image you built earlier, e.g. `centos7-ansible:test`).
   3. Run a container from the image: `docker run --detach --privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro olidrouin/docker-centos7-ansible:latest` (to test my Ansible roles, I add in a volume mounted from the current working directory with ``--volume=`pwd`:/etc/ansible/roles/role_under_test:ro``).
   4. Use Ansible inside the container:
     a. `docker exec --tty [container_id] env TERM=xterm ansible --version`
