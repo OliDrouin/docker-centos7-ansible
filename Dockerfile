@@ -46,9 +46,6 @@ USER ansible
 WORKDIR /home/ansible
 
 RUN pip3 install $pip_packages --user ansible
-#RUN pip3 install $pip_packages 
-
-USER root 
 
 VOLUME ["/sys/fs/cgroup"]
 CMD ["/usr/lib/systemd/systemd"]
